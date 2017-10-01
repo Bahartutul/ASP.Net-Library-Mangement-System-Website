@@ -1,0 +1,86 @@
+﻿@model IEnumerable<lmsmvc.Models.bookreturnmodel>
+
+@{
+    Layout = "~/Views/Shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div class="container">
+        <h3>Recent Maximum Late Return User:</h3>
+        <table class="table table-bordered table-hover" border="1">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.userid)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.serialno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.borrow_date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.return_date)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.return_at)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.fine)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.userid)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.serialno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.borrow_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.return_date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.return_at)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.fine)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Warnning", "warnmsg", new { id = item.userid })
+
+                    </td>
+                </tr>
+            }
+
+        </table>
+        <div>
+            @Html.ActionLink("Back to List", "Index", "book");
+        </div>
+    </div>
+</body>
+</html>

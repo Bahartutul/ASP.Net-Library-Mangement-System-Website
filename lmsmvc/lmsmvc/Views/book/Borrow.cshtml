@@ -1,0 +1,63 @@
+﻿
+@{
+    Layout = "~/Views/Shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Borrow</title>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form method="post">
+                    <div class="panel-body">
+                        <h3>Are you sure you want to Borrow this?</h3>
+                        <div class="form-group">
+                            <label>Userid:</label>
+                            <input type="text" value="@Session["userid"]" name="userid" class="form-control" readonly/>
+                        </div>
+                        <div class="form-group">
+                            <label>Username:</label>
+                            <input type="text" value="@Session["username"]" name="username" class="form-control" readonly/>
+                        </div>
+                        <div class="form-group">
+                            <label>Serialno:</label>
+                            <input type="text" value="@Model.serialno" name="sl" class="form-control" readonly/>
+                        </div>
+                        <div class="form-group">
+                            <label>Bookname:</label>
+                            <input type="text" value="@Model.book_name" name="bname" class="form-control" readonly />
+                           
+                        </div>
+
+                        <div class="form-group">
+                            <label>Borrow_date:</label>
+                            <input type="text" value="@ViewBag.date" name="bdate" class="form-control" readonly/>
+                        </div>
+                        <div class="form-group">
+                            <label>Return_date:</label>
+                            <input type="text" value="@ViewBag.date7" name="rdate" class="form-control" readonly/>
+                            <label style="color:red">@ViewBag.msg1</label> 
+                           <label style="color:green">@ViewBag.msg</label>
+                            <label style="color:red">@ViewBag.error</label>  
+                        </div>
+                     
+
+                        <div class="form-group">
+                            <input type="submit" value="Borrow" name="btn" class="btn btn-primary pull-right glyphicon glyphicon-log-in" />
+                            @Html.ActionLink("Back to List", "uPanel")
+                        </div>
+                        </div>
+                    </form>
+                    </div>
+            </div>
+        </div>
+    
+</body>
+</html>

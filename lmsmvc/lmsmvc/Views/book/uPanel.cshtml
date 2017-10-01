@@ -1,0 +1,105 @@
+﻿
+@model IEnumerable<lmsmvc.Models.bookmodel>
+
+@{
+    Layout = "~/views/shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li class="active">  @Html.ActionLink("HOME", "uPanel")</li>
+                    <li>  @Html.ActionLink("My Borrow Details", "borrowdetails", new {id=@Session["userid"] })</li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>@Html.ActionLink("Log Out", "logout") </li>
+                </ul>
+
+            </div>
+            <form class="navbar-form navbar-right" method="post">
+                
+               
+                
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="searchString">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+            
+
+        </div>
+    </nav>
+    <div class="container">
+        
+        <table class="table table-bordered table-hover" border="1">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.serialno)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.book_name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.author)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.edition)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.shelf)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.amount)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.serialno)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.book_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.author)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.edition)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.shelf)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.amount)
+                    </td>
+                    <td>
+                        
+                        @Html.ActionLink("Details", "ubDetails", new { id = item.id }) |
+                        @Html.ActionLink("Borrow", "Borrow", new { id = item.id }) 
+                        
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    <input type="hidden" name="uid" value="@Session["userid"]" />
+</body>
+</html>

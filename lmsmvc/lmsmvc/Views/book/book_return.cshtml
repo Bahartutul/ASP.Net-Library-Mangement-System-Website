@@ -1,0 +1,73 @@
+﻿
+
+@{
+    Layout = "~/Views/Shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>book_return</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <form method="post">
+                    <div class="panel-body">
+                        <h3>Return Book</h3>
+                        <div class="form-group">
+                            <label>Userid:</label>
+                            <input type="text" value="@Model.userid" name="userid" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label>Username:</label>
+                            <input type="text" value="@Model.username" name="username" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label>Serialno:</label>
+                            <input type="text" value="@Model.serialno" name="sl" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label>Bookname:</label>
+                            <input type="text" value="@Model.book_name" name="bname" class="form-control" readonly />
+                            @ViewBag.msg
+                        </div>
+
+                        <div class="form-group">
+                            <label>Borrow_date:</label>
+                            <input type="text" value="@Model.borrow_date" name="bdate" class="form-control" readonly />
+                        </div>
+                        <div class="form-group">
+                            <label>Return_date:</label>
+                            <input type="text" value="@Model.return_date" name="rdate" class="form-control" readonly />
+
+                        </div>
+                        <div class="form-group">
+                            <label>Return_at:</label>
+                            <input type="text" value="@ViewBag.date" name="ratdate" class="form-control" readonly />
+
+                        </div>
+
+                        <div class="form-group">
+                            <label>Fine:</label>
+                            <input type="text" value="@ViewBag.fine" name="fine" class="form-control" readonly />
+                            <label style="color:green">@ViewBag.msg</label>
+                        </div>
+
+
+                        <div class="form-group">
+                            <input type="submit" value="Return" name="btn" class="btn btn-primary pull-right glyphicon glyphicon-log-in" />
+                            @Html.ActionLink("Back to List", "aborrowdetails")
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+﻿@model lmsentity.user
+
+@{
+    Layout = "~/Views/Shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>uDetails</title>
+</head>
+<body>
+    <div>
+        <h4>user</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.username)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.username)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.password)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.password)
+            </dd>
+    
+            
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.gender)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.gender)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.address)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.address)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.account_type)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.account_type)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "uEdit", new { id = Model.userid }) |
+        @Html.ActionLink("Back to List", "ulist")
+    </p>
+</body>
+</html>

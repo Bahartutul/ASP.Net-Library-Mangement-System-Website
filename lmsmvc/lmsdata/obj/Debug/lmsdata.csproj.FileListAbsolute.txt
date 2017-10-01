@@ -1,0 +1,12 @@
+E:\lmsmvc\lmsdata\obj\Debug\lmsdata.csprojResolveAssemblyReference.cache
+E:\lmsmvc\lmsdata\bin\Debug\lmsdata.dll.config
+E:\lmsmvc\lmsdata\bin\Debug\lmsdata.dll
+E:\lmsmvc\lmsdata\bin\Debug\lmsdata.pdb
+E:\lmsmvc\lmsdata\bin\Debug\EntityFramework.dll
+E:\lmsmvc\lmsdata\bin\Debug\EntityFramework.SqlServer.dll
+E:\lmsmvc\lmsdata\bin\Debug\lmsentity.dll
+E:\lmsmvc\lmsdata\bin\Debug\lmsentity.pdb
+E:\lmsmvc\lmsdata\bin\Debug\EntityFramework.xml
+E:\lmsmvc\lmsdata\bin\Debug\EntityFramework.SqlServer.xml
+E:\lmsmvc\lmsdata\obj\Debug\lmsdata.dll
+E:\lmsmvc\lmsdata\obj\Debug\lmsdata.pdb

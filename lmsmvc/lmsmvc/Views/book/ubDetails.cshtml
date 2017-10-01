@@ -1,0 +1,73 @@
+﻿@model lmsentity.book
+
+@{
+    Layout = "~/Views/Shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Book Detail</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.serialno)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.serialno)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.book_name)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.book_name)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.author)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.author)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.edition)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.edition)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.shelf)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.shelf)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.amount)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.amount)
+            </dd>
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Borrow", "Borrow", new { id = Model.id }) |
+        @Html.ActionLink("Back to List", "uPanel")
+    </p>
+    
+</body>
+</html>

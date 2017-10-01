@@ -1,0 +1,10 @@
+E:\lmsmvc\lmsentity\bin\Debug\lmsentity.dll.config
+E:\lmsmvc\lmsentity\bin\Debug\lmsentity.dll
+E:\lmsmvc\lmsentity\bin\Debug\lmsentity.pdb
+E:\lmsmvc\lmsentity\bin\Debug\EntityFramework.dll
+E:\lmsmvc\lmsentity\bin\Debug\EntityFramework.SqlServer.dll
+E:\lmsmvc\lmsentity\bin\Debug\EntityFramework.xml
+E:\lmsmvc\lmsentity\bin\Debug\EntityFramework.SqlServer.xml
+E:\lmsmvc\lmsentity\obj\Debug\lmsentity.dll
+E:\lmsmvc\lmsentity\obj\Debug\lmsentity.pdb
+E:\lmsmvc\lmsentity\obj\Debug\lmsentity.csprojResolveAssemblyReference.cache

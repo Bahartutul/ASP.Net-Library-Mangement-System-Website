@@ -1,0 +1,97 @@
+﻿
+@model IEnumerable<lmsmvc.Models.usermodel>
+
+@{
+    Layout = "~/Views/Shared/view.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>udetails</title>
+</head>
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav">
+                    <li >  @Html.ActionLink("HOME", "Index")</li>
+                    <li class="active">@Html.ActionLink("USER Details", "ulist")</li>
+                    <li>@Html.ActionLink("BORROW DETAILS", "aborrowdetails")</li>
+                    <li>@Html.ActionLink("REPORT1", "report")</li>
+                </ul>
+            </div>
+            <form class="navbar-form navbar-right" method="post">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search" name="usearchString">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">
+                            <i class="glyphicon glyphicon-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>
+    <div class="container">
+        <p>
+            @Html.ActionLink("Create New", "uCreate")
+        </p>
+        <table class="table table-bordered table-hover" border="1">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.username)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.con_password)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.gender)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.address)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.account_type)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.username)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.con_password)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.gender)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.account_type)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "uEdit", new { id = item.userid }) |
+                        @Html.ActionLink("Details", "uDetails", new { id = item.userid }) |
+                        @Html.ActionLink("Delete", "uDelete", new { id = item.userid })
+                    </td>
+                </tr>
+            }
+
+        </table>
+        </div>
+</body>
+</html>
